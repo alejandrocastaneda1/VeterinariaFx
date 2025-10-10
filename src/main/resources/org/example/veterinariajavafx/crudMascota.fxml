@@ -1,29 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17"
+            fx:controller="org.example.veterinariajavafx.ViewController.MascotaViewController"
+            prefWidth="700" prefHeight="500">
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.veterinariajavafx.ViewController.MascotaViewController">
-   <children>
-      <Pane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <Label layoutX="118.0" layoutY="37.0" prefHeight="132.0" prefWidth="351.0" text="Ventana Mascota">
-               <font>
-                  <Font size="44.0" />
-               </font>
-            </Label>
-            <TableView fx:id="tableMascotas" layoutX="47.0" layoutY="150.0" prefHeight="200.0" prefWidth="482.0">
-              <columns>
-                <TableColumn fx:id="tcNombreMascota" prefWidth="135.20001220703125" text="Nombre Mascota" />
-                <TableColumn fx:id="tcEspecieMascota" prefWidth="124.79998779296875" text="Especie" />
-              </columns>
-            </TableView>
-         </children>
-      </Pane>
-   </children>
+    <children>
+        <Label text="Gestión de Mascotas 🐾"
+               layoutX="220" layoutY="20"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2E8B57;" />
+
+        <Button text="Volver al inicio"
+                layoutX="30" layoutY="20"
+                onAction="#volverInicio" />
+
+        <GridPane layoutX="100" layoutY="80" hgap="10" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" prefWidth="150" />
+                <ColumnConstraints halignment="LEFT" prefWidth="200" />
+            </columnConstraints>
+
+            <children>
+                <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Nombre:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNombre" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Especie:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtEspecie" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Raza:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtRaza" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Edad:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtEdad" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Peso:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtPeso" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+
+        <Button text="Agregar" layoutX="580" layoutY="111" prefWidth="100" onAction="#agregarMascota"/>
+        <Button text="Actualizar" layoutX="580" layoutY="151" prefWidth="100" onAction="#actualizarMascota"/>
+        <Button text="Eliminar" layoutX="580" layoutY="191" prefWidth="100" onAction="#eliminarMascota"/>
+        <Button text="Buscar" layoutX="580" layoutY="231" prefWidth="100" onAction="#buscarMascota"/>
+
+        <TableView fx:id="tablaMascotas" layoutX="100" layoutY="330" prefWidth="500" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="100"/>
+                <TableColumn fx:id="colEspecie" text="Especie" prefWidth="100"/>
+                <TableColumn fx:id="colRaza" text="Raza" prefWidth="100"/>
+                <TableColumn fx:id="colEdad" text="Edad" prefWidth="60"/>
+                <TableColumn fx:id="colPeso" text="Peso" prefWidth="60"/>
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.veterinariajavafx.ViewController.InicioViewController"
+            prefHeight="400" prefWidth="600">
+    <children>
+        <Label text="Bienvenidos a la Veterinaria Amigos Peludos 🐾"
+               layoutX="70" layoutY="50"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2E8B57;" />
+
+        <Button text="Gestión de Responsables" layoutX="200" layoutY="150" prefWidth="200"
+                onAction="#irAResponsables" />
+        <Button text="Gestión de Mascotas" layoutX="200" layoutY="200" prefWidth="200"
+                onAction="#irAMascotas" />
+        <Button text="Gestión de Consultas" layoutX="200" layoutY="250" prefWidth="200"
+                onAction="#irAConsultas" />
+    </children>
+</AnchorPane>

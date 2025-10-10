@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25"
+            fx:controller="org.example.veterinariajavafx.ViewController.ResponsableViewController">
+
+    <children>
+        <Label layoutX="230" layoutY="20" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2E8B57;"
+               text="Gestión de Responsables 👤" />
+
+        <Button layoutX="30" layoutY="20" onAction="#volverInicio" text="Volver al inicio" />
+
+        <!-- Formulario Responsable -->
+        <GridPane hgap="10" layoutX="100" layoutY="80" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" prefWidth="150" />
+                <ColumnConstraints halignment="LEFT" prefWidth="200" />
+            </columnConstraints>
+
+            <children>
+                <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Teléfono:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="txtContacto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Dirección:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="txtDireccion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Nivel de Fidelidad:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="txtNivelFidelidad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <!-- Botones -->
+        <Button layoutX="580.0" layoutY="111.0" prefWidth="100" text="Agregar" onAction="#agregarResponsable" />
+        <Button layoutX="580.0" layoutY="151.0" prefWidth="100" text="Actualizar" onAction="#actualizarResponsable" />
+        <Button layoutX="580.0" layoutY="191.0" prefWidth="100" text="Eliminar" onAction="#eliminarResponsable" />
+        <Button layoutX="580.0" layoutY="231.0" prefWidth="100" text="Buscar" onAction="#buscarResponsable" />
+
+        <!-- Tabla -->
+        <TableView fx:id="tablaResponsables" layoutX="100" layoutY="330" prefHeight="150" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="150" text="Nombre" />
+                <TableColumn fx:id="colContacto" prefWidth="100" text="Teléfono" />
+                <TableColumn fx:id="colDireccion" prefWidth="150" text="Dirección" />
+                <TableColumn fx:id="colNivelFidelidad" prefWidth="100" text="Fidelidad" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

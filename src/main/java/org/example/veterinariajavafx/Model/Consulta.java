@@ -18,42 +18,54 @@ public class Consulta {
 
 
     public String getNumId() {
+
         return numId;
     }
     public void setNumId(String numId) {
+
         this.numId = numId;
     }
 
     public String getFecha() {
+
         return fecha;
     }
     public void setFecha(String fecha) {
+
         this.fecha = fecha;
     }
 
     public String getAnimalId() {
+
         return animalId;
     }
     public void setAnimalId(String animalId) {
+
         this.animalId = animalId;
     }
 
     public float getValorBase() {
+
         return valorBase;
     }
     public void setValorBase(float valorBase) {
+
         this.valorBase = valorBase;
     }
     public float getCostoFinal() {
+
         return costoFinal;
     }
     public void setCostoFinal(float costoFinal) {
+
         this.costoFinal = costoFinal;
     }
     public TipoConsulta getTipoConsulta() {
+
         return tipoConsulta;
     }
     public void setTipoConsulta(TipoConsulta tipoConsulta) {
+
         this.tipoConsulta = tipoConsulta;
     }
     @Override

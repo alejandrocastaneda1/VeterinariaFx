@@ -14,21 +14,27 @@ public class Ave extends Mascota {
     }
 
     public String getTipoPlumaje() {
+
         return tipoPlumaje;
     }
     public void setTipoPlumaje(String tipoPlumaje) {
+
         this.tipoPlumaje = tipoPlumaje;
     }
     public boolean isCapacidadVuelo() {
+
         return capacidadVuelo;
     }
     public void setCapacidadVuelo(boolean capacidadVuelo) {
+
         this.capacidadVuelo = capacidadVuelo;
     }
-    public String getCantidadAlimento() {
+    public String getCantidadAlimento()
+    {
         return cantidadAlimento;
     }
     public void setCantidadAlimento(String cantidadAlimento) {
+
         this.cantidadAlimento = cantidadAlimento;
     }
     @Override

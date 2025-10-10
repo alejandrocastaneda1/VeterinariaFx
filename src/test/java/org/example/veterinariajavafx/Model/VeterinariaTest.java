@@ -38,7 +38,7 @@ public class VeterinariaTest {
     // 4. Costo vacunación reptil adulto
     @Test
     void costoVacunacionReptil() {
-        Consulta c = new Consulta("004", "2025-10-03", "Reptil", 60000, 0);
+        Consulta c = new Consulta("004", "2025-10-03", "Reptil" ,60000, 0);
         vet.CRUD("crear", c);
         c.setCostoFinal(c.getValorBase() * 1.05f);
         assertEquals(63000, c.getCostoFinal());

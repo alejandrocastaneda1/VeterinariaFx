@@ -4,14 +4,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import org.example.veterinariajavafx.App;
 
-public class PropietarioViewController {
-
-    App app;
-
+public class InicioViewController {
+App app;
     @FXML
     private ResourceBundle resources;
 
@@ -19,20 +15,26 @@ public class PropietarioViewController {
     private URL location;
 
     @FXML
-    private Button btnEnviarPropietario;
+    void irAConsultas(ActionEvent event) {
+        app.openViewConsulta();
+    }
 
     @FXML
-    private TextField tfNombrePropietario;
-
-    @FXML
-    void onEnviarForm(ActionEvent event) {
+    void irAMascotas(ActionEvent event) {
         app.openViewMascota();
+
+    }
+
+    @FXML
+    void irAResponsables(ActionEvent event) {
+        app.openViewResponsable();
+
     }
 
     @FXML
     void initialize() {
-    }
 
+    }
     public void setApp(App app) {
         this.app = app;
     }
