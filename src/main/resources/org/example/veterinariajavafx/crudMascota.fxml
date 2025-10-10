@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.veterinariajavafx.ViewController.MascotaViewController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="118.0" layoutY="37.0" prefHeight="132.0" prefWidth="351.0" text="Ventana Mascota">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableMascotas" layoutX="47.0" layoutY="150.0" prefHeight="200.0" prefWidth="482.0">
+              <columns>
+                <TableColumn fx:id="tcNombreMascota" prefWidth="135.20001220703125" text="Nombre Mascota" />
+                <TableColumn fx:id="tcEspecieMascota" prefWidth="124.79998779296875" text="Especie" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
